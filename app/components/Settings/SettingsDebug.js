@@ -181,6 +181,10 @@ class SettingsDebug extends Component {
           });
 
           this.setState({ commandList: currentList, navigation: currentList.length });
+
+          $("#console").animate({
+            scrollTop: $('#console')[0].scrollHeight - $('#console')[0].clientHeight
+          }, 100);
         }).catch((error) => {
           currentList.push({
             time,
